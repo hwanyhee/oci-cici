@@ -10,7 +10,7 @@ jobs:
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v3.3.0
+        uses: actions/checkout@v4
 
       - name: Install SSH Client
         run: sudo apt install -y openssh-client
@@ -21,10 +21,10 @@ jobs:
           ssh-private-key: ${{ secrets.OCI_SSH_KEY }}
       - name: Deploy to OCI
         run: |
-          ssh -o StrictHostKeyChecking=no ${{ secrets.OCI_USER }}@${{ secrets.OCI_PUBLIC_IP }} << 'EOF'
-            cd /home/ubuntu/oci-cici
-            git pull origin master
-            # 파이썬 스크립트 실행
-            python3 hello.py
-          EOF
+          ssh -o StrictHostKeyChecking=no ${{ secrets.OCI_USER }}@${{ secrets.OCI_PUBLIC_IP }}
+          cd /home/ubuntu/oci-cici
+          git pull origin master
+          # 파이썬 스크립트 실행
+          python3 hello.py
+          
             

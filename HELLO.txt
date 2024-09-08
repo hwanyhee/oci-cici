@@ -2,8 +2,3 @@ HELLO GIT
 hi
 add line
 add line2
-add line3
-add lin4
-1234567890
-hello CICD
-999999999

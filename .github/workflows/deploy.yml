@@ -25,6 +25,6 @@ jobs:
             cd /home/ubuntu/oci-cici
             git pull origin master
             # 파이썬 스크립트 실행
-            #python3 cicd.py
+            python3 hello.py
           EOF
             

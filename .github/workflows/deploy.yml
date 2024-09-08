@@ -22,7 +22,7 @@ jobs:
       - name: Deploy to OCI
         run: |
           ssh -o StrictHostKeyChecking=no ${{ secrets.OCI_USER }}@${{ secrets.OCI_PUBLIC_IP }} << 'EOF'
-            cd /home/ubuntu/cicd
+            cd /home/ubuntu/oci-cici
             git pull origin master
             # 파이썬 스크립트 실행
             #python3 cicd.py
